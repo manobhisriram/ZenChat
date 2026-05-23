@@ -132,20 +132,47 @@ Custom-built Streamlit interface featuring:
 # System Architecture
 
 ```text
-User Query
-    ↓
-Streamlit Frontend
-    ↓
-Embedding Generation
-    ↓
-Qdrant Vector Search
-    ↓
-Top-K Context Retrieval
-    ↓
-Groq LLM
-    ↓
-AI Generated Response
-Project Structure
+┌──────────────────────────┐
+│        User Query        │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│    Streamlit Frontend    │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│   Embedding Generation   │
+│ all-MiniLM-L6-v2 Model   │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│    Qdrant Vector DB      │
+│   Semantic Search Layer  │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│   Top-K Context Retrieval│
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│        Groq LLM          │
+│ llama-3.3-70b-versatile  │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│   AI Generated Response  │
+└──────────────────────────┘
+```
+
+# Project Structure
+
+```bash
 Chatbot-Demo/
 │
 ├── app.py
@@ -156,108 +183,119 @@ Chatbot-Demo/
 │
 └── data/
     └── ChatBot_Q_A's.pdf
-Core AI Components
-Retrieval Pipeline
-Semantic chunk retrieval
-Score threshold filtering
-Payload indexing
-Context injection
-Embedding Model
-all-MiniLM-L6-v2
+```
 
-Used for semantic vector generation.
+---
 
-LLM Model
-llama-3.3-70b-versatile
+# Installation
 
-Served using Groq inference.
+## Clone Repository
 
-Installation
-Clone Repository
+```bash
 git clone https://github.com/manobhisriram/Chatbot-Demo.git
 cd Chatbot-Demo
-Create Virtual Environment
-Windows
+```
+
+---
+
+## Create Virtual Environment
+
+### Windows
+
+```bash
 python -m venv venv
 venv\Scripts\activate
-Mac/Linux
+```
+
+### Mac/Linux
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
-Install Dependencies
+```
+
+---
+
+## Install Dependencies
+
+```bash
 pip install -r requirements.txt
-Configure Environment Variables
+```
 
-Create a .env file:
+---
 
+## Configure Environment Variables
+
+Create a `.env` file:
+
+```env
 GROQ_API_KEY=your_groq_api_key
 QDRANT_URL=your_qdrant_url
 QDRANT_API_KEY=your_qdrant_api_key
-Run Application
+```
+
+---
+
+## Run Application
+
+```bash
 streamlit run app.py
-Sample Queries
+```
+
+---
+
+# Sample Queries
+
+```text
 • What services do you provide?
 • What is included in full house cleaning?
 • Do you offer combo discounts?
 • House + kitchen + bathroom cleaning total?
 • How can I book a service?
-Engineering Highlights
-Prompt Engineering
-Business-specific system prompts
-Controlled AI responses
-Dynamic pricing logic
-Conversational alignment
-Production RAG Design
-Context-aware retrieval
-Efficient vector search
-Scalable architecture
-Modular AI pipeline
-Enterprise Frontend
-Custom CSS styling
-Dynamic layouts
-Interactive chat UI
-Responsive components
-Future Improvements
-WhatsApp AI Agent
-Voice AI Integration
-LangChain / LangGraph
-Multi-agent workflows
-CRM integration
-AI analytics dashboard
-Autonomous booking workflows
-Resume Impact
+```
 
-This project demonstrates:
+---
 
-Generative AI Engineering
-RAG System Design
-Vector Database Integration
-Semantic Search
-LLM Application Development
-AI Product Engineering
-Production-grade Frontend Development
-Author
-Manu
+# Engineering Highlights
+
+- Production-grade RAG architecture
+- Semantic search pipeline
+- Dynamic PDF ingestion
+- Vector similarity retrieval
+- Context-aware LLM responses
+- Enterprise-level Streamlit UI
+- Modular AI architecture
+- Prompt-engineered workflows
+
+---
+
+# Future Improvements
+
+- WhatsApp AI Agent
+- Voice AI Integration
+- LangChain / LangGraph
+- Multi-agent workflows
+- CRM integration
+- Autonomous booking workflows
+
+---
+
+# Author
+
+## Manu
 
 Generative AI Engineer | Agentic AI Engineer
 
-Building:
+Focused on:
+- AI Agents
+- RAG Systems
+- LLM Applications
+- Enterprise AI Workflows
+- AI Product Engineering
 
-AI Agents
-RAG Applications
-LLM Products
-Enterprise AI Systems
-AI Workflow Automation
-GitHub Topics
-generative-ai
-rag
-llm
-streamlit
-qdrant
-groq
-semantic-search
-vector-database
-python
-ai-chatbot
-Star This Repository
+---
+
+# Star This Repository
 
 If you found this project useful, give it a star.
+
