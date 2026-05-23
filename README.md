@@ -1,354 +1,263 @@
-# ✨ ZenShine Pro — AI-Powered Cleaning Assistant
-
 <div align="center">
 
-<img src="https://img.shields.io/badge/AI%20Powered-Groq%20LLM-0f172a?style=for-the-badge&logo=openai&logoColor=white" />
-<img src="https://img.shields.io/badge/RAG-Qdrant%20Vector%20DB-166534?style=for-the-badge&logo=qdrant&logoColor=white" />
-<img src="https://img.shields.io/badge/Frontend-Streamlit-red?style=for-the-badge&logo=streamlit&logoColor=white" />
-<img src="https://img.shields.io/badge/Embeddings-SentenceTransformers-blue?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python&logoColor=black" />
+# ZenShine Pro
+### AI-Powered RAG Customer Support Assistant
 
-<br/>
-<br/>
+<p align="center">
+  <img src="https://img.shields.io/badge/LLM-Groq-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/RAG-Qdrant-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Frontend-Streamlit-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge" />
+</p>
 
-### Premium AI Customer Support System for Service Businesses
-
-*A production-ready Retrieval-Augmented Generation (RAG) chatbot with enterprise-grade UI, semantic search, multilingual conversations, and intelligent service recommendations.*
+<p align="center">
+  Enterprise-grade AI chatbot with semantic search, PDF ingestion, multilingual support, and premium UI/UX.
+</p>
 
 </div>
 
 ---
 
-# 🚀 Overview
+# Overview
 
-ZenShine Pro is a full-stack AI assistant built for modern service businesses.  
-It combines:
+ZenShine Pro is a production-ready AI customer support assistant designed for service businesses.
 
-- **LLM-powered conversations**
-- **RAG-based contextual retrieval**
-- **Vector search using Qdrant**
-- **Premium Streamlit UI**
-- **Multilingual customer interaction**
-- **Dynamic pricing & discount calculations**
+This project combines:
 
-The system allows customers to:
-
-- Ask service-related queries
-- Get pricing instantly
-- Retrieve answers from uploaded PDFs
-- Book services conversationally
-- Receive intelligent package recommendations
-
-This project demonstrates practical implementation of:
-
-- Generative AI
-- Agentic workflows
 - Retrieval-Augmented Generation (RAG)
-- Vector Databases
-- Semantic Search
-- Prompt Engineering
-- AI Product Engineering
-- Production-grade UI/UX
+- Semantic search
+- Vector databases
+- Large Language Models
+- Premium frontend engineering
+- Intelligent pricing workflows
+
+The chatbot can:
+
+- Answer customer queries
+- Retrieve information from uploaded PDFs
+- Generate context-aware responses
+- Handle multilingual conversations
+- Calculate discounts automatically
+- Recommend service packages
 
 ---
 
-# 🧠 Core AI Features
+# Features
 
-## 🔹 RAG Pipeline (Retrieval-Augmented Generation)
+## AI-Powered Conversational Assistant
 
-The chatbot retrieves relevant chunks from uploaded PDF documents and injects them into the LLM context before response generation.
+- Context-aware responses
+- Natural conversations
+- Dynamic customer interaction
+- Smart service recommendations
 
-### Workflow
+---
 
-```text
-User Query
-   ↓
-Sentence Embedding
-   ↓
-Qdrant Vector Search
-   ↓
-Top-K Semantic Matches
-   ↓
-Context Injection
-   ↓
-Groq LLM Response
-🔹 Semantic Search Engine
+## RAG Architecture
 
-Implemented using:
+Retrieval-Augmented Generation pipeline using:
 
-SentenceTransformers
-all-MiniLM-L6-v2
-Cosine Similarity Search
-Qdrant Cloud
+- Qdrant Vector Database
+- SentenceTransformers embeddings
+- Semantic retrieval
+- Context injection into LLM
 
-Supports:
+---
 
-Context-aware retrieval
-Semantic matching
-High-speed vector search
-Dynamic document ingestion
-🔹 Intelligent Pricing Engine
+## Semantic Search
 
-The AI automatically:
+Supports intelligent document retrieval using:
 
-Calculates discounts
-Applies combo offers
-Handles service bundles
-Generates custom quotations
+- all-MiniLM-L6-v2 embeddings
+- Cosine similarity search
+- Vector indexing
+- Top-K retrieval strategy
 
-Example:
+---
 
-2 Services → 10% OFF
-3+ Services → 20% OFF
-First Customer → ₹100 OFF
-🔹 Multilingual AI Support
+## PDF Knowledge Base
 
-Supports:
-
-English
-Tamil
-Hindi
-
-The assistant automatically responds in the same language as the user.
-
-🖥️ Premium UI/UX Engineering
-
-This project includes a highly customized Streamlit interface featuring:
-
-Modern enterprise UI
-Responsive chat layout
-Dynamic sidebar
-Custom CSS architecture
-Animated status indicators
-Floating controls
-Premium typography
-Live AI indicators
-Glassmorphism-inspired design
-🏗️ System Architecture
-                    ┌────────────────────┐
-                    │    User Query      │
-                    └─────────┬──────────┘
-                              │
-                              ▼
-                 ┌────────────────────────┐
-                 │   Streamlit Frontend   │
-                 └─────────┬──────────────┘
-                           │
-                           ▼
-              ┌────────────────────────────┐
-              │   Query Embedding Model    │
-              │ all-MiniLM-L6-v2           │
-              └─────────┬──────────────────┘
-                        │
-                        ▼
-              ┌────────────────────────────┐
-              │      Qdrant Vector DB      │
-              │ Semantic Retrieval Engine  │
-              └─────────┬──────────────────┘
-                        │
-                        ▼
-             ┌─────────────────────────────┐
-             │ Retrieved Context Chunks    │
-             └─────────┬───────────────────┘
-                       │
-                       ▼
-             ┌─────────────────────────────┐
-             │      Groq LLM Inference     │
-             │ llama-3.3-70b-versatile     │
-             └─────────┬───────────────────┘
-                       │
-                       ▼
-             ┌─────────────────────────────┐
-             │    AI Generated Response    │
-             └─────────────────────────────┘
-⚡ Tech Stack
-Category	Technology
-Frontend	Streamlit
-LLM Provider	Groq
-Model	llama-3.3-70b-versatile
-Vector DB	Qdrant Cloud
-Embeddings	SentenceTransformers
-PDF Processing	PyMuPDF
-Backend	Python
-Semantic Search	Cosine Similarity
-Environment Management	dotenv
-HTTP Layer	httpx
-📂 Project Structure
-📦 ZenShine-Pro
- ┣ 📜 app.py
- ┣ 📜 rag.py
- ┣ 📜 .env
- ┣ 📂 data
- ┣ 📂 assets
- ┗ 📜 requirements.txt
-🔥 Key Engineering Highlights
-✅ Enterprise-Level Prompt Engineering
-
-Custom system prompts designed for:
-
-Business alignment
-Controlled responses
-Accurate pricing
-Service boundaries
-Conversational consistency
-✅ Production-Ready RAG Architecture
-
-Implemented:
-
-Chunking
-Overlapping windows
-Semantic embeddings
-Vector indexing
-Retrieval filtering
-Context injection
-✅ Dynamic PDF Knowledge Base
-
-Users can upload PDFs directly from the UI.
+Users can upload PDFs directly into the application.
 
 The system automatically:
 
-Extracts text
-Chunks documents
-Generates embeddings
-Stores vectors
-Enables semantic querying
-✅ Optimized Retrieval Strategy
+1. Extracts text
+2. Chunks content
+3. Generates embeddings
+4. Stores vectors in Qdrant
+5. Enables semantic querying
 
-Features:
+---
 
-Top-K retrieval
+## Multilingual Support
+
+Supports:
+
+- English
+- Tamil
+- Hindi
+
+The chatbot automatically replies in the user's language.
+
+---
+
+## Premium UI/UX
+
+Custom-built Streamlit interface featuring:
+
+- Enterprise-style layout
+- Animated status indicators
+- Modern sidebar design
+- Responsive chat interface
+- Premium typography
+- Custom CSS architecture
+
+---
+
+# Tech Stack
+
+| Technology | Usage |
+|---|---|
+| Python | Backend |
+| Streamlit | Frontend UI |
+| Groq | LLM Inference |
+| Qdrant | Vector Database |
+| SentenceTransformers | Embeddings |
+| PyMuPDF | PDF Processing |
+| dotenv | Environment Variables |
+| httpx | HTTP Client |
+
+---
+
+# System Architecture
+
+```text
+User Query
+    ↓
+Streamlit Frontend
+    ↓
+Embedding Generation
+    ↓
+Qdrant Vector Search
+    ↓
+Top-K Context Retrieval
+    ↓
+Groq LLM
+    ↓
+AI Generated Response
+Project Structure
+Chatbot-Demo/
+│
+├── app.py
+├── rag.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+│
+└── data/
+    └── ChatBot_Q_A's.pdf
+Core AI Components
+Retrieval Pipeline
+Semantic chunk retrieval
 Score threshold filtering
-Sentinel filtering
 Payload indexing
-Embedding caching
-✅ Scalable AI Infrastructure
+Context injection
+Embedding Model
+all-MiniLM-L6-v2
 
-Designed with scalability in mind:
+Used for semantic vector generation.
 
-Cloud vector database
-Stateless frontend
-Modular AI pipeline
-Separated retrieval layer
-Configurable embeddings
-📸 Product Features
-AI Assistant
-Conversational customer support
-Smart recommendations
-FAQ automation
-Context-aware responses
-Business Features
-Service pricing
-Combo discounts
-Package recommendations
-Contact management
-Admin Features
-Upload knowledge PDFs
-Dynamic indexing
-Real-time KB expansion
-System status monitoring
-🧩 Sample Queries
-• What is included in full house cleaning?
-• Do you offer combo discounts?
-• House + kitchen + bathroom cleaning total?
-• What are your service timings?
-• How do I book a cleaning service?
-🛠️ Installation
+LLM Model
+llama-3.3-70b-versatile
+
+Served using Groq inference.
+
+Installation
 Clone Repository
-git clone https://github.com/yourusername/zenshine-pro.git
-cd zenshine-pro
+git clone https://github.com/manobhisriram/Chatbot-Demo.git
+cd Chatbot-Demo
 Create Virtual Environment
-python -m venv venv
 Windows
+python -m venv venv
 venv\Scripts\activate
 Mac/Linux
+python3 -m venv venv
 source venv/bin/activate
 Install Dependencies
 pip install -r requirements.txt
 Configure Environment Variables
 
-Create .env
+Create a .env file:
 
 GROQ_API_KEY=your_groq_api_key
 QDRANT_URL=your_qdrant_url
 QDRANT_API_KEY=your_qdrant_api_key
 Run Application
 streamlit run app.py
-📈 Future Enhancements
-Voice AI integration
-WhatsApp AI agent
-Autonomous booking workflows
-CRM integration
-LangChain/LangGraph migration
-Multi-agent orchestration
-Payment gateway integration
-AI analytics dashboard
-Customer memory system
-Lead qualification agents
-🧠 What This Project Demonstrates
-AI Engineering
+Sample Queries
+• What services do you provide?
+• What is included in full house cleaning?
+• Do you offer combo discounts?
+• House + kitchen + bathroom cleaning total?
+• How can I book a service?
+Engineering Highlights
 Prompt Engineering
-RAG Systems
-Semantic Retrieval
-LLM Integration
-Context Injection
-Embedding Pipelines
-Software Engineering
-Production-grade architecture
-Modular backend design
-Cloud integration
-Frontend engineering
-Performance optimization
-Product Thinking
-Customer experience optimization
-AI-driven automation
-Business workflow digitization
-Scalable AI systems
-📊 Resume-Level Impact
+Business-specific system prompts
+Controlled AI responses
+Dynamic pricing logic
+Conversational alignment
+Production RAG Design
+Context-aware retrieval
+Efficient vector search
+Scalable architecture
+Modular AI pipeline
+Enterprise Frontend
+Custom CSS styling
+Dynamic layouts
+Interactive chat UI
+Responsive components
+Future Improvements
+WhatsApp AI Agent
+Voice AI Integration
+LangChain / LangGraph
+Multi-agent workflows
+CRM integration
+AI analytics dashboard
+Autonomous booking workflows
+Resume Impact
 
-This project showcases capabilities expected from:
+This project demonstrates:
 
-Generative AI Engineer
-Applied AI Engineer
-AI Product Engineer
-Agentic AI Developer
-ML Platform Engineer
-
-It demonstrates practical expertise in:
-
-LLM applications
-AI system design
-Vector databases
-AI UX engineering
-Production AI deployment
-👨‍💻 Author
+Generative AI Engineering
+RAG System Design
+Vector Database Integration
+Semantic Search
+LLM Application Development
+AI Product Engineering
+Production-grade Frontend Development
+Author
 Manu
 
-Generative AI Engineer | Agentic AI Engineer | AI Product Builder
+Generative AI Engineer | Agentic AI Engineer
 
-Focused on building:
+Building:
 
-AI agents
-RAG systems
-LLM products
-Enterprise AI workflows
-Production-grade GenAI applications
-⭐ If you like this project
+AI Agents
+RAG Applications
+LLM Products
+Enterprise AI Systems
+AI Workflow Automation
+GitHub Topics
+generative-ai
+rag
+llm
+streamlit
+qdrant
+groq
+semantic-search
+vector-database
+python
+ai-chatbot
+Star This Repository
 
-Give it a star and connect with me.
-
-📌 Technical References
-
-Core implementation inspired from:
-
-Retrieval-Augmented Generation (RAG)
-Vector similarity search
-LLM orchestration
-Semantic retrieval pipelines
-
-Codebase includes:
-
-Custom Streamlit engineering
-Qdrant vector indexing
-Groq inference integration
-PDF semantic ingestion
-Dynamic conversational workflows
+If you found this project useful, give it a star.
